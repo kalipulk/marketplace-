@@ -54,14 +54,14 @@ function productQuantity(product) {
             id: product
         }, function(err, res){
             if (err) throw err;
-            if (res[0].quantity>= answer.quantity){
-                var newQuantity = data[0].quantity - answer.quantity;
-                var productName = data[0].name;
-                var productPrice = data[0].price;
-                connnection.query("UPDATE products SET ? WHERE ?",
+            if (res[0].quantity >= answer.quantity){
+                var newQuantity = res[0].quantity - answer.quantity;
+                var productName = res[0].name;
+                var productPrice = res[0].price;
+                connection.query("UPDATE products SET ? WHERE ?",
                 [
                     {
-                        quantity = newQuantity
+                        quantity:newQuantity
                     },
                     {
                         id:product
@@ -80,12 +80,12 @@ function productQuantity(product) {
       });
   }  
 
-shopAgain() {
+function shopAgain() {
     inquirer
         .prompt ({
             name: "continue",
             type: "list",
-            message: "Continue shopping?"
+            message: "Continue shopping?",
             choices: ["Yes", "No"]
         }).then(function(answer){
             if(answer.continue === "Yes"){
