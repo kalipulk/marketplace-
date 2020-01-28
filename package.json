@@ -1,0 +1,24 @@
+{
+  "name": "marketplace-",
+  "version": "1.0.0",
+  "description": "amazon-like storefront using MySQL",
+  "main": "customer_app.js",
+  "dependencies": {
+    "inquirer": "^7.0.4",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kalipulk/marketplace-.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kalipulk/marketplace-/issues"
+  },
+  "homepage": "https://github.com/kalipulk/marketplace-#readme"
+}
